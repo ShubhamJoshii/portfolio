@@ -11,6 +11,7 @@ import NPTELIOT from "../Assets/NPTEL- IOT.jpg";
 import { useState } from "react";
 import { motion } from "framer-motion";
 import SectionHeader from "./SectionHeader";
+import { Element } from "react-scroll";
 
 const CertificateArr = [
   {
@@ -59,14 +60,10 @@ const fadeInAnimationSkills = {
   }),
 };
 
-const Certificate = ({ setActiveNavbar }) => {
-  const [ShowCertificate, setShowCertificate] = useState(false);
+const Certificate = () => {
   const [isHovered, setIsHovered] = useState(0);
   return (
-    <section
-      id="Certificate"
-      onMouseEnter={() => setActiveNavbar("Certificate")}
-    >
+    <Element name="Certificate" id="Certificate">
       <SectionHeader heading="Certificates" />
       <div id="AllCertificates">
         {CertificateArr.map((curr, ids, arr) => {
@@ -95,7 +92,7 @@ const Certificate = ({ setActiveNavbar }) => {
           );
         })}
       </div>
-    </section>
+    </Element>
   );
 };
 

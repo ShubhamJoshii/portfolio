@@ -10,6 +10,9 @@ import Header from "./Header";
 import DownArrow from "../Assets/Arrowdown.gif";
 import Typewriter from "typewriter-effect";
 import { motion } from "framer-motion";
+import { Element } from "react-scroll";
+import { Link } from "react-scroll";
+
 const imageAnimation = {
   initial: {
     opacity: 0,
@@ -43,23 +46,20 @@ const textVariants = {
     },
   }),
 };
-const FrontPage = ({ activeNavbar, setActiveNavbar }) => {
+
+const FrontPage = () => {
   return (
-    <section id="FrontPage">
-      <Header activeNavbar={activeNavbar} setActiveNavbar={setActiveNavbar} />
-      <div
-        id="FrontPageContainer"
-        className="Pages"
-        onMouseEnter={() => setActiveNavbar("Home")}
-      >
-        <a href="#AboutME">
+    <Element name="FrontPage" id="FrontPage">
+      <Header />
+      <div id="FrontPageContainer" className="Pages">
+        <Link to="Skills" spy={true} smooth={true}>
           <img
             src={DownArrow}
             alt="ScrollDown"
             rel="noreferrer"
             id="arrowDown"
           />
-        </a>
+        </Link>
         <div id="firstHalf">
           <motion.h2
             variants={textVariants}
@@ -84,7 +84,12 @@ const FrontPage = ({ activeNavbar, setActiveNavbar }) => {
               }}
             />
           </motion.h3>
-          <motion.p variants={textVariants} initial="initial" animate="animate" custom={2}>
+          <motion.p
+            variants={textVariants}
+            initial="initial"
+            animate="animate"
+            custom={2}
+          >
             A Full-Stack Web Developer passionate about creating <br />
             interactive application and experiences on the web
           </motion.p>
@@ -172,7 +177,7 @@ const FrontPage = ({ activeNavbar, setActiveNavbar }) => {
         />
       </div>
       <p id="sideMail">shubhamjoshii676@gmail.com</p>
-    </section>
+    </Element>
   );
 };
 

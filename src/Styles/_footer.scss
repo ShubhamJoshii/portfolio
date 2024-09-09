@@ -1,240 +1,198 @@
 #Footer {
-    background-color: #0B0A0B;
-    color: white;
-    margin: auto;
-    margin-top: 40px;
-    position: relative;
-    scroll-snap-align: end;
-    #SocialMedia {
-        display: flex;
-        justify-content: space-evenly;
-        align-items: center;
-        #SocialMedia1{
-            width: 50%;
-        }
-        h1 {
-            color: white;
-            font-size: 115px;
-            margin: 0;
-        }
-        h2 {
-            margin: 0;
-            font-size: 115px;
-            transform: rotate(180deg);
-            background: linear-gradient(to left, rgba(255, 255, 255, 1), rgba(11, 10, 11, 0));
-            margin-top: -45px;
-            -webkit-text-fill-color: transparent;
-            -webkit-background-clip: text;
-        }
+  background-color: #0b0a0b;
+  color: white;
+  margin: auto;
+  margin-top: 40px;
+  position: relative;
+  scroll-snap-align: end;
+  #SocialMedia {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    #SocialMedia1 {
+      width: 50%;
     }
-    #SocialLOGO{
-        width: 30%;
-        div{
-            display: flex;
-            align-items: center;
-            justify-content: space-evenly;
-            gap: 10px;
-            flex-wrap: wrap;
-            margin-bottom: 10px;
-        }
-        img{
-            width: 71px;
-            height: 71px;
-            cursor: pointer;
-            border-radius: 4px;
-            &:hover{
-                transform: scale(1.05);
-                box-shadow: 0 0 5px white;
-            }
-        }
+    h1 {
+      color: white;
+      font-size: 115px;
+      margin: 0;
     }
-    footer{
-        border-top: 2px solid white;
-        margin: 0 30px;
-        padding: 0px 13px;
-        display: flex;
-        h2{
-            width: 40%;
-            margin: 0;
-        }
-        ul{
-            list-style: none;
-            display: flex;
-            justify-content: space-evenly;
-            align-items: center;
-            margin: 0;
-            flex: 1;
-            li{
-                a{
-                    text-decoration: none;
-                    color: white;
-                    font-weight: bold;
-                }
-                &:not(.active)::after{
-                    content: "";
-                    display: block;
-                    height: 2px;
-                    width: 120%;
-                    margin-top: 4px;
-                    margin-left: -10%;
-                    background-color: #FFF500;
-                    transform: scaleX(0);
-                    transform-origin: left;
-                    transition: transform 0.3s ease;
-                }
-                
-                &:hover::after{
-                    transform: scaleX(1);
-                }
-            }
-        }
+    h2 {
+      margin: 0;
+      font-size: 115px;
+      transform: rotate(180deg);
+      background: linear-gradient(
+        to left,
+        rgba(255, 255, 255, 1),
+        rgba(11, 10, 11, 0)
+      );
+      margin-top: -45px;
+      -webkit-text-fill-color: transparent;
+      -webkit-background-clip: text;
     }
-    #rightsFooter{
-        display: flex;
-        gap: 10px;
-        align-items: center;
-        justify-content: flex-end;
-        margin: 0 30px;
-        padding: 5px 30px;
-        p{
-            margin: 0;
-            font-size: 11px;
-        }
+  }
+  #SocialLOGO {
+    width: 30%;
+    div {
+      display: flex;
+      align-items: center;
+      justify-content: space-evenly;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-bottom: 10px;
     }
-
-    #sideFooterBTN{
-        position: absolute;
-        right: 0;
-        width: 5px;
-        height: 86px;
-        top: 50%;
-        z-index: 999;
+    img {
+      width: 71px;
+      height: 71px;
+      cursor: pointer;
+      border-radius: 15px;
+      &:hover {
+        transform: scale(1.005);
+        box-shadow: 0 0 5px white;
+      }
+    }
+  }
+  footer {
+    border-top: 2px solid white;
+    margin: 0 30px;
+    padding: 0px 13px;
+    display: flex;
+    h2 {
+      width: 40%;
+      margin: 0;
+    }
+    ul {
+      list-style: none;
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+      margin: 0;
+      flex: 1;
+      a {
         cursor: pointer;
-        background-color: #D9D9D9;
-        border: 1px solid white;
-        border-radius: 10px 0 0 10px;
-        box-shadow: inset white;
-        
-    }
-
-    #sideFooterBTN2{
-        position: absolute;
-        right: 0;
-        display: none;
-        width: 45px;
-        z-index: 999;
-        // display: flex;
-        flex-direction: column;
-        gap: 8px;
-        padding: 20px 4px;
-        bottom: 20px;
-        background-color: #D9D9D9;
-        border: 1px solid white;
-        border-radius: 10px 0 0 10px;
-        box-shadow: inset white;
-        &:hover{
-            display: flex;
+        li {
+          text-decoration: none;
+          color: white;
+          font-weight: bold;
         }
-        a{
-            margin-bottom: 5px;
-            &:hover{
-                transform: scale(1.2);
-            }
-            img{
-                width: 40px;
-            }
+        &:not(.active)::after {
+          content: "";
+          display: block;
+          height: 2px;
+          width: 120%;
+          margin-top: 4px;
+          margin-left: -10%;
+          background-color: #fff500;
+          transform: scaleX(0);
+          transform-origin: left;
+          transition: transform 0.3s ease;
         }
-    }
 
-    #sideFooterBTN:hover + #sideFooterBTN2{
-        // transform: scale(1.1);
+        &:hover::after {
+          transform: scaleX(1);
+        }
+      }
+    }
+  }
+  #rightsFooter {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: flex-end;
+    margin: 0 30px;
+    padding: 5px 30px;
+    p {
+      margin: 0;
+      font-size: 11px;
+    }
+  }
+
+
+  @media only screen and (max-width: 1139px) {
+    #SocialMedia {
+      h1,
+      h2 {
+        font-size: 80px;
+      }
+      h2 {
+        margin-top: -25px;
+      }
+      img {
+        width: 50px;
+        height: 50px;
+      }
+    }
+  }
+
+  @media only screen and (max-width: 778px) {
+    #SocialMedia {
+      h1,
+      h2 {
+        font-size: 60px;
+      }
+      h2 {
+        margin-top: -15px;
+      }
+      img {
+        width: 40px;
+        height: 40px;
+      }
+    }
+  }
+
+  @media only screen and (max-width: 585px) {
+    #SocialMedia {
+      flex-direction: column;
+      align-items: flex-start;
+      margin-left: 20px;
+      #SocialMedia1 {
+        width: 90%;
+      }
+      #SocialLOGO {
+        width: 100%;
+        // margin: auto;
+        margin-left: -20px;
+        margin-top: -30px;
+        z-index: 99;
         display: flex;
-    }
-
-    @media only screen and (max-width: 1139px) {
-        #SocialMedia{
-            h1,h2{
-                font-size: 80px;
-            }
-            h2{
-                margin-top: -25px;
-            }
-            img{
-                width: 50px;
-                height: 50px;
-            }
+        gap: 15px;
+        justify-content: center;
+        div {
+          gap: 15px;
         }
+      }
+      h1,
+      h2 {
+        font-size: 60px;
+      }
+      h2 {
+        margin-top: -15px;
+      }
+      img {
+        width: 40px;
+        height: 40px;
+      }
     }
-
-    @media only screen and (max-width: 778px) {
-        #SocialMedia{
-            h1,h2{
-                font-size: 60px;
-            }
-            h2{
-                margin-top: -15px;
-            }
-            img{
-                width: 40px;
-                height: 40px;
-            }
-        }
-        
+  }
+  @media only screen and (max-width: 1133px) {
+    footer h2 {
+      width: 19%;
+      font-size: 18px;
     }
-
-    @media only screen and (max-width: 585px) {
-        #SocialMedia{
-            flex-direction: column;
-            align-items: flex-start;
-            margin-left: 20px;
-            #SocialMedia1{
-                width: 90%;
-            }
-            #SocialLOGO{
-                width: 100%;
-                // margin: auto;
-                margin-left: -20px;
-                margin-top: -30px;
-                z-index: 99;
-                display: flex;
-                gap: 15px;
-                justify-content: center;
-                div{
-                    gap: 15px;
-                }
-            }
-            h1,h2{
-                font-size: 60px;
-            }
-            h2{
-                margin-top: -15px;
-            }
-            img{
-                width: 40px;
-                height: 40px;
-            }
-        }
+  }
+  @media only screen and (max-width: 764px) {
+    footer {
+      h2 {
+        width: 100%;
+      }
+      ul {
+        display: none;
+      }
     }
-    @media only screen and (max-width: 1133px) {
-        footer h2{
-            width: 19%;
-            font-size: 18px;
-        }
+  }
+  @media only screen and (max-width: 764px) {
+    #rightsFooter {
+      margin: 0;
     }
-    @media only screen and (max-width: 764px) {
-        footer{
-            h2{
-                width: 100%;
-            }
-            ul{
-                display: none;
-            }
-        } 
-    }
-    @media only screen and (max-width: 764px) {
-        #rightsFooter{
-            margin: 0;
-        }
-         
-    }
+  }
 }

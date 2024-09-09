@@ -1,6 +1,7 @@
 import React from "react";
 import SectionHeader from "./SectionHeader";
 import { motion } from "framer-motion";
+import { Element } from "react-scroll";
 const animationSkills = {
   initial: {
     opacity: 0,
@@ -30,8 +31,8 @@ const Div = ({ MainHeading, data }) => {
       </motion.h3>
       <div id="content">
         {data.map((curr, id) => {
-          return (  
-            <div id="content-inner" key={id}>
+          return (
+            <div id="content-inner" key={curr.id + id}>
               <motion.h4
                 variants={animationSkills}
                 initial="initial"
@@ -68,9 +69,10 @@ const Div = ({ MainHeading, data }) => {
                   {curr.location}
                 </motion.p>
               )}
-              {curr.description.map((desc) => {
+              {curr.description.map((desc,index) => {
                 return (
                   <motion.p
+                  key={index}
                     variants={animationSkills}
                     initial="initial"
                     whileInView="animate"
@@ -83,10 +85,10 @@ const Div = ({ MainHeading, data }) => {
                 );
               })}
               <ul>
-                {curr.list.map((li,index) => {
+                {curr.list.map((li, index) => {
                   return (
                     <motion.li
-                    key={"id"+index}
+                      key={"id" + index}
                       variants={animationSkills}
                       initial="initial"
                       whileInView="animate"
@@ -110,6 +112,7 @@ const Div = ({ MainHeading, data }) => {
 const Resume = ({ setActiveNavbar }) => {
   const data1 = [
     {
+      id:"adfaf",
       head: "Shubham Joshi",
       duration: "",
       location: "",
@@ -125,6 +128,7 @@ const Resume = ({ setActiveNavbar }) => {
   ];
   const data2 = [
     {
+      id:"aadeew",
       head: " Bachelor of Computer Application (BCA)",
       duration: "2021 - 2024",
       location: "",
@@ -137,6 +141,7 @@ const Resume = ({ setActiveNavbar }) => {
   ];
   const data3 = [
     {
+      id:"weqrw",
       head: "Front-end Web Development Intern, IBM SkillsBuild and CSRBOX Academic Internship",
       duration: "June 2023 - Aug 2023",
       location: "",
@@ -148,6 +153,7 @@ const Resume = ({ setActiveNavbar }) => {
       ],
     },
     {
+      id:"gjdff",
       head: "Association for Computer Enthusiasts (ACE)",
       duration: "",
       location: "",
@@ -156,7 +162,8 @@ const Resume = ({ setActiveNavbar }) => {
     },
   ];
   return (
-    <section id="Resume" onMouseEnter={() => setActiveNavbar("AboutME")}>
+    <Element name="AboutME" id="Resume">
+      {/* <section id="Resume" onMouseEnter={() => setActiveNavbar("AboutME")}> */}
       <SectionHeader heading={"Resume"} />
       <div id="ResumeContainer">
         <div>
@@ -165,7 +172,8 @@ const Resume = ({ setActiveNavbar }) => {
         </div>
         <Div MainHeading={"Professional Experience"} data={data3} />
       </div>
-    </section>
+      {/* </section> */}
+    </Element>
   );
 };
 
@@ -173,5 +181,5 @@ export default Resume;
 
 {
   /* <h2>About Me</h2>
-<p>I'm a passionate Full Stack Developer currently pursuing my BCA-hons. I enjoy taking complex problems and turning them into simple and beautiful interface designs. I also love the logic and structure of coding and always." and i know about MERN stack, Sass, HTML, CSS, JS and Git and Github</p> */
+  <p>I'm a passionate Full Stack Developer currently pursuing my BCA-hons. I enjoy taking complex problems and turning them into simple and beautiful interface designs. I also love the logic and structure of coding and always." and i know about MERN stack, Sass, HTML, CSS, JS and Git and Github</p> */
 }

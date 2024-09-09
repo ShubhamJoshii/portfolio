@@ -44,7 +44,7 @@ const ContactMe = ({ setActiveNavbar }) => {
 
   }
   return (
-    <section id="ContactME" onMouseEnter={() => setActiveNavbar("ContactME")}>
+    <section id="Contact" onMouseEnter={() => setActiveNavbar("Contact")}>
       <div id="ContactMEinner">
         <div id='ContactMeDetails'>
           <h1>Contact Me</h1>

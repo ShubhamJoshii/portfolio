@@ -10,8 +10,9 @@ import Linkedin from "../Assets/LinkedIn (2).png"
 import { db } from "../firebase";
 import { ref, set } from "firebase/database";
 import {motion} from "framer-motion"
+import { Element } from 'react-scroll';
 
-const ContactMe = ({ setActiveNavbar, fadeInAnimationSection }) => {
+const ContactMe = ({fadeInAnimationSection }) => {
   const [ContactForm, setContactForm] = useState({
     User_Name: "",
     User_Email: "",
@@ -46,7 +47,7 @@ const ContactMe = ({ setActiveNavbar, fadeInAnimationSection }) => {
 
   }
   return (
-    <section id="ContactME" onMouseEnter={() => setActiveNavbar("ContactME")}>
+    <Element name="Contact" id="Contact">
       <motion.div
         variants={fadeInAnimationSection}
         initial="initial"
@@ -91,12 +92,12 @@ const ContactMe = ({ setActiveNavbar, fadeInAnimationSection }) => {
           <input type='text' placeholder='Your Name' name='User_Name' onChange={handleInput} value={ContactForm.User_Name} />
           <input type='email' placeholder='Your Email' name='User_Email' onChange={handleInput} value={ContactForm.User_Email} />
           <textarea placeholder='Your Message' name='User_Message' onChange={handleInput} value={ContactForm.User_Message}></textarea>
-          <input type='submit' value="Submit" onClick={handleSubmit} />
+          <input type='submit' value="Send Message" onClick={handleSubmit} />
         </form>
       </div>
       
       </motion.div>
-    </section>
+    </Element>
   )
 }
 

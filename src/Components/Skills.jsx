@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { animate, delay, motion } from "framer-motion";
 import SectionHeader from "./SectionHeader";
+import { Element } from "react-scroll";
 
 const SkillsData = [
   {
@@ -74,7 +75,7 @@ const fadeInAnimationSkills = {
     opacity: 0,
     width: 0,
   },
-  animate: ({knowledgePercent,ids}) => ({
+  animate: ({ knowledgePercent, ids }) => ({
     opacity: 1,
     width: `${knowledgePercent}%`,
     transition: {
@@ -85,7 +86,8 @@ const fadeInAnimationSkills = {
 
 const Skills = ({ setActiveNavbar, fadeInAnimationSection }) => {
   return (
-    <section id="Skills" onMouseEnter={() => setActiveNavbar("Skills")}>
+    <Element name="Skills" id="Skills">
+      {/* <section id="Skills" onMouseEnter={() => setActiveNavbar("Skills")}> */}
       <motion.div
         variants={fadeInAnimationSection}
         initial="initial"
@@ -94,45 +96,51 @@ const Skills = ({ setActiveNavbar, fadeInAnimationSection }) => {
           once: true,
         }}
       >
-      <SectionHeader heading={"Skills"} description={"Proficient in React JS, Express JS, MongoDB, Typescript, CSS, JavaScript, and HTML5. Experienced with development tools like Git, VS Code, and cloud platforms such as Cloudinary and Firebase."}/>
-      <div id="cardsCollection">
-        {SkillsData.map((curr, ids) => {
-          return (
-            <motion.div
-              key={ids}
-              variants={animationSkills}
-              initial="initial"
-              whileInView="animate"
-              viewport={{
-                once: true,
-              }}
-              custom={ids}
-            >
-              <div id="SkillInfo">
-                <p>{curr.Text}</p>
-                <p>{curr.knowledgePercent}%</p>
-              </div>
-              <div id="progress-bar-wrap">
-                <motion.div
-                  id="progress-bar"
-                  style={{
-                    backgroundColor: `#${curr.Color}`,
-                  }}
-                  variants={fadeInAnimationSkills}
-                  initial="initial"
-                  whileInView="animate"
-                  viewport={{
-                    once: true,
-                  }}
-                  custom={{knowledgePercent:curr.knowledgePercent,ids}}
-                ></motion.div>
-              </div>
-            </motion.div>
-          );
-        })}
-      </div>
+        <SectionHeader
+          heading={"Skills"}
+          description={
+            "Proficient in React JS, Express JS, MongoDB, Typescript, CSS, JavaScript, and HTML5. Experienced with development tools like Git, VS Code, and cloud platforms such as Cloudinary and Firebase."
+          }
+        />
+        <div id="cardsCollection">
+          {SkillsData.map((curr, ids) => {
+            return (
+              <motion.div
+                key={ids}
+                variants={animationSkills}
+                initial="initial"
+                whileInView="animate"
+                viewport={{
+                  once: true,
+                }}
+                custom={ids}
+              >
+                <div id="SkillInfo">
+                  <p>{curr.Text}</p>
+                  <p>{curr.knowledgePercent}%</p>
+                </div>
+                <div id="progress-bar-wrap">
+                  <motion.div
+                    id="progress-bar"
+                    style={{
+                      backgroundColor: `#${curr.Color}`,
+                    }}
+                    variants={fadeInAnimationSkills}
+                    initial="initial"
+                    whileInView="animate"
+                    viewport={{
+                      once: true,
+                    }}
+                    custom={{ knowledgePercent: curr.knowledgePercent, ids }}
+                  ></motion.div>
+                </div>
+              </motion.div>
+            );
+          })}
+        </div>
       </motion.div>
-    </section>
+      {/* </section> */}
+    </Element>
   );
 };
 

@@ -40,6 +40,12 @@
     font-size: 16px !important;
     letter-spacing: .5px;
   }
+  @media only screen and (max-width: 638px) {
+    #description {
+      margin-bottom: 20px !important;
+    }
+    
+  }
   // &:not(:has(#description)) #heading {
     // margin-bottom: 30px;
   // }

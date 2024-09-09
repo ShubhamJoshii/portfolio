@@ -13,6 +13,7 @@ import {
 } from "react-icons/fa";
 import SectionHeader from "./SectionHeader";
 import { motion, useScroll, useTransform } from "framer-motion";
+import { Element } from "react-scroll";
 const fadeInAnimationSkills = {
   initial: {
     opacity: 0,
@@ -134,11 +135,14 @@ const Projects = ({ setActiveNavbar }) => {
 
   const targetRef = useRef(null);
   const { scrollYProgress } = useScroll({ target: targetRef });
-  const x = useTransform(scrollYProgress, [0, 1], ["10%", "-80%"]);
+  const x = useTransform(scrollYProgress, [0, 1], ["2%", "-90%"]);
 
   return (
     <>
-      <section id="Projects" ref={targetRef}  onMouseEnter={() => setActiveNavbar("Projects")}>
+    <Element name="Projects" id="Projects">
+      <section id="Projects" ref={targetRef}  
+      // onMouseEnter={() => setActiveNavbar("Projects")}
+      >
         <div className="contentContainer">
           <div id="headerCarousel">
             <SectionHeader
@@ -205,6 +209,7 @@ const Projects = ({ setActiveNavbar }) => {
           </motion.div>
         </div>
       </section>
+      </Element>
     </>
   );
 };

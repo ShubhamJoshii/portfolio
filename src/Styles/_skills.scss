@@ -45,12 +45,16 @@
   @media only screen and (max-width: 638px) {
     width: 90%;
     margin: auto;
+    padding-bottom: 0;
     #heading {
       padding-top: 20px;
     }
     #cardsCollection {
       grid-template-columns: 1fr;
       padding: 0 10px;
+      #progress-bar-wrap{
+        height: 7px;
+      }
     }
   }
 }
