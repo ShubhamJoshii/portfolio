@@ -7,11 +7,9 @@ import Github from "../Assets/Github2.png"
 import Twitter from "../Assets/Twitter.png"
 import Linkedin from "../Assets/LinkedIn (2).png"
 
-import { db } from "../firebase";
+import { db } from "../../firebase";
 import { ref, set } from "firebase/database";
-import {motion} from "framer-motion"
-
-const ContactMe = ({ setActiveNavbar, fadeInAnimationSection }) => {
+const ContactMe = ({ setActiveNavbar }) => {
   const [ContactForm, setContactForm] = useState({
     User_Name: "",
     User_Email: "",
@@ -47,14 +45,6 @@ const ContactMe = ({ setActiveNavbar, fadeInAnimationSection }) => {
   }
   return (
     <section id="ContactME" onMouseEnter={() => setActiveNavbar("ContactME")}>
-      <motion.div
-        variants={fadeInAnimationSection}
-        initial="initial"
-        whileInView="animate"
-        viewport={{
-          once: true,
-        }}
-      >
       <div id="ContactMEinner">
         <div id='ContactMeDetails'>
           <h1>Contact Me</h1>
@@ -94,8 +84,6 @@ const ContactMe = ({ setActiveNavbar, fadeInAnimationSection }) => {
           <input type='submit' value="Submit" onClick={handleSubmit} />
         </form>
       </div>
-      
-      </motion.div>
     </section>
   )
 }

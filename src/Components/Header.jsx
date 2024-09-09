@@ -56,7 +56,7 @@ const Header = ({activeNavbar,setActiveNavbar}) => {
                     </div>
                     <ol>
                         <li className={activeNavbar === "Home" ? 'active' : ""} onClick={()=>setDisplayMenu(false)}><a href='#FrontPage' rel="noreferrer"><img src={HeaderImage4} alt='HeaderImage' /> Home</a></li>
-                        <li className={activeNavbar === "AboutME" ? 'active' : ""} onClick={()=>setDisplayMenu(false)}><a href='#AboutME' rel="noreferrer"><img src={HeaderImage5} alt='HeaderImage' /> About me</a></li>
+                        {/* <li className={activeNavbar === "AboutME" ? 'active' : ""} onClick={()=>setDisplayMenu(false)}><a href='#AboutME' rel="noreferrer"><img src={HeaderImage5} alt='HeaderImage' /> About me</a></li> */}
                         <li className={activeNavbar === "Skills" ? 'active' : ""} onClick={()=>setDisplayMenu(false)}><a href='#Skills' rel="noreferrer"><img src={HeaderImage6} alt='HeaderImage' /> Skills</a></li>
                         <li className={activeNavbar === "Projects" ? 'active' : ""} onClick={()=>setDisplayMenu(false)}><a href='#Projects' rel="noreferrer"><img src={HeaderImage3} alt='HeaderImage' /> Projects</a></li>
                         <li  className={activeNavbar === "Certificate" ? 'active' : ""} onClick={()=>setDisplayMenu(false)}><a href='#Certificate' rel="noreferrer"><img src={HeaderImage1} alt='HeaderImage' /> Certificates</a></li>
@@ -67,7 +67,7 @@ const Header = ({activeNavbar,setActiveNavbar}) => {
             </div>
             <ul>
                 <li className={activeNavbar === "Home" ? 'active' : ""}><a href='#FrontPage' rel="noreferrer">HOME</a></li>
-                <li className={activeNavbar === "AboutME" ? 'active' : ""}><a href='#AboutME' rel="noreferrer">ABOUT ME</a></li>
+                <li className={activeNavbar === "Skills" ? 'active' : ""}><a href='#Skills' rel="noreferrer">SKILLS</a></li>
                 <li className={activeNavbar === "Projects" ? 'active' : ""}><a href='#Projects' rel="noreferrer">PROJECT</a></li>
                 <li className={activeNavbar === "ContactME" ? 'active' : ""}><a href='#ContactME' rel="noreferrer">CONTACT</a></li>
                 <li><a href='https://drive.google.com/file/d/170t40CWF0c0pLFkfXWJmqu7MMjPYWeO6/view?usp=sharing' target='_blank' rel="noreferrer">RESUME</a></li>
@@ -78,7 +78,8 @@ const Header = ({activeNavbar,setActiveNavbar}) => {
                 </a>
                 <ul>
                     <li className={activeNavbar === "Home" ? 'active' : ""}><a href='#FrontPage' rel="noreferrer">HOME</a></li>
-                    <li className={activeNavbar === "AboutME" ? 'active' : ""}><a href='#AboutME' rel="noreferrer">ABOUT ME</a></li>
+                    {/* <li className={activeNavbar === "Skills" ? 'active' : ""} onClick={()=>setDisplayMenu(false)}><a href='#Skills' rel="noreferrer"><img src={HeaderImage6} alt='HeaderImage' /> Skills</a></li> */}
+                    <li className={activeNavbar === "Skills" ? 'active' : ""}><a href='#Skills' rel="noreferrer">SKILLS</a></li>
                     <li className={activeNavbar === "Projects" ? 'active' : ""}><a href='#Projects' rel="noreferrer">PROJECT</a></li>
                     <li className={activeNavbar === "ContactME" ? 'active' : ""}><a href='#ContactME' rel="noreferrer">CONTACT</a></li>
                     <li><a href='https://drive.google.com/file/d/170t40CWF0c0pLFkfXWJmqu7MMjPYWeO6/view?usp=sharing' target='_blank' rel="noreferrer">RESUME</a></li>

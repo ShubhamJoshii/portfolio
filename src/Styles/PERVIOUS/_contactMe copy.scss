@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Roboto:ital,wght@0,400;0,500;0,700;0,900;1,400;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Italianno&display=swap');
+
+#ContactME{
+    color: white;
+    padding-top: 50px;
+    #ContactMEinner{
+        margin: 10px 30px;
+        border: 6px solid #1D3A4A;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        border-radius: 17px;
+        padding: 50px 10px;
+        #ContactMeDetails{
+            width: 35%;
+            h1{
+                font-size: 70px;
+                font-family: "Roboto",sans-serif;
+                margin: 0;
+                margin-bottom: 20px;
+            }
+            div{
+                display: flex;
+                gap: 10px;
+                align-items: center;
+                font-size: 20px;
+                p{
+                    margin: 0;
+                }
+                img{
+                    width: 36px;
+                    cursor: pointer;
+                    border-radius: 10px;
+                }
+            }
+            #SocialMedias{
+                display: flex;
+                // justify-content: space-evenly;
+                // justify-content: center;
+                gap: 15px;
+                align-items: center;
+                padding: 20px 30px;
+                img{
+                    &:hover{
+                        transform: scale(1.1);
+                        box-shadow: 0 0 5px white;
+                    }
+                }
+            }
+            button{
+                font-size: 22px;
+                background-color: #B1B7BA;
+                border: none;
+                text-align: center;
+                width: 320px;
+                border-radius: 4px;
+                font-weight: bold;
+                padding: 5px;
+                color: #041C32;
+                margin-top: 10px;
+                cursor: pointer;
+                &:hover{
+                    transform: scale(1.05);
+                    box-shadow: 0 0 5px white;
+                }
+            }
+        }
+        #ContactMEForm{
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            input{
+                color: #A3AAAE;
+                padding: 6px 10px;
+                border-radius: 5px;
+                border: none;
+                font-size: 16px;
+                background-color: rgb(250, 250, 250,0.1);
+            }
+            input[type=submit]{
+                font-size: 20px;
+                background-color: #ADB4B7;
+                color: #041C32;
+                text-align: center;
+                border: none;
+                width: 150px;
+                border-radius: 4px;
+                font-weight: bold;
+                padding: 3px;
+                margin-top: 10px;
+                cursor: pointer;
+                &:hover{
+                    transform: scale(1.05);
+                    box-shadow: 0 0 5px white;
+                }
+            }
+            textarea{
+                color: #A3AAAE;
+                padding: 6px 10px;
+                height: 266px;
+                border-radius: 5px;
+                border: none;
+                font-size: 16px;
+                background-color: rgb(250, 250, 250,0.1);
+            }
+        }
+
+        @media only screen and (max-width: 1130px) {
+            #ContactMeDetails{    
+                h1{
+                    font-size: 60px;
+                }
+                p{
+                    font-size: 15px;
+                }
+                div img{
+                        width: 30px;
+                }
+                textarea{
+                    height: 200px;
+                }
+            }
+            // #ContactMeDetails{
+            // }
+        }
+        @media only screen and (max-width: 980px) {
+            flex-direction: column;
+            gap: 40px;
+            margin: 10px;
+            #ContactMeDetails{
+                width: 312px;
+                #SocialMedias{
+                    justify-content: space-evenly;
+                }
+            }
+            #ContactMEForm{
+                width: 95%;
+            }
+            #ContactMEForm textarea{
+                height: 100px;
+            }
+        }
+        // @media only screen and (max-width: 950px) {
+        // }
+    }
+    
+}

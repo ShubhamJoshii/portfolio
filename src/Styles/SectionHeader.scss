@@ -1,0 +1,46 @@
+.SectionHeader {
+  #heading {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    // width: ;
+    h2 {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      color: white;
+      margin: 0;
+      font-size: 32px;
+      font-weight: bold;
+      text-transform: uppercase;
+      padding-bottom: 10px;
+    }
+    #lines {
+      margin-top: 10px;
+      width: 90%;
+      height: 1px;
+      background: rgb(255, 255, 255);
+      position: relative;
+      #front-line {
+        position: absolute;
+        top: -1.5px;
+        left: 50%;
+        transform: translate(-50%);
+        width: 40%;
+        height: 4px;
+        background: #b3541e;
+      }
+    }
+  }
+
+  #description {
+    text-align: center !important;
+    margin-bottom: 60px !important;
+    font-size: 16px !important;
+    letter-spacing: .5px;
+  }
+  // &:not(:has(#description)) #heading {
+    // margin-bottom: 30px;
+  // }
+}

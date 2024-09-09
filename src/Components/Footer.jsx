@@ -14,7 +14,7 @@ import ContactLogo from "../Assets/Call.png";
 
 const Footer = ({activeNavbar,setActiveNavbar}) => {
   return (
-    <footer id="Footer">
+    <section id="Footer">
       <div id='SocialMedia'>
         <div id='SocialMedia1'>
           <h1>Follow me</h1>
@@ -69,7 +69,7 @@ const Footer = ({activeNavbar,setActiveNavbar}) => {
         <p>All right reserved</p>
         <p>Privacy Policy</p>
       </div>
-    </footer>
+    </section>
   )
 }
 

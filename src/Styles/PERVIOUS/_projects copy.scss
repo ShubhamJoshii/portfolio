@@ -1,0 +1,249 @@
+#Projects {
+    background-color: white;
+    #ProjectsInner {
+        background: linear-gradient(180.06deg, #0B0A0B 0.05%, #04293A 29.6%, rgba(2, 23, 33, 0.604704) 73.38%, rgba(4, 41, 58, 0) 99.95%);
+        min-height: 90vh;
+        color: white;
+        overflow: hidden;
+        padding: 54px 0px 0px 0px;
+
+        h1 {
+            margin: 0;
+            margin-left: 10%;
+            margin-bottom: 8px;
+            font-size: 53px;
+        }
+
+        p {
+            margin: 0;
+            margin-left: 10%;
+            width: 970px;
+            text-align: justify;
+            font-size: 18px;
+            letter-spacing: 1px;
+        }
+
+        #ProjectCollections {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            // justify-content: space-around;
+            align-items: center;
+            // align-items: stretch;
+
+            gap: 100px;
+            padding: 40px 20px;
+            height: 450px;
+
+            #Icons {
+                position: absolute;
+                width: 100vw;
+                display: flex;
+                justify-content: space-between;
+                font-size: 35px;
+                #leftIcon, #RightIcon {
+                    z-index: 99;
+                    margin: 0 12px;
+                    cursor: pointer;
+                    background-color: #04293A;
+                    border-radius: 4px;
+                }
+            }
+
+            
+
+            #ProjectCard {
+                width: 360px; 
+                // height: 290px;
+                padding: 18px;
+                background-color: #041C32;
+                border-radius: 10px;
+                cursor: pointer;
+                // align-self:stretch !important;
+                // align-items: stretch !important;
+                // align-self: unset;
+                #ProjectImage {
+                    position: relative;
+                    img {
+                        border-radius: 4px;
+                        width: 360px;
+                        box-shadow: 0 0 10px #ffffff5d;
+                    }
+
+                    div {
+                        position: absolute;
+                        top: 5px;
+                        right: 5px;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        gap: 10px;
+
+                        a {
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            color: white;
+                            font-size: 12px;
+                            background-color: #0F0E11;
+                            padding: 8px;
+                            border-radius: 50%;
+                            transition: transform 0.8s;
+                            transform-style: preserve-3d;
+                            box-shadow:  0 0 10px #ffffff5d;
+                            &:hover {
+                                animation-name: ProjectLInkAnime;
+                                animation-duration: 0.8s;
+                            }
+                        }
+
+                        @keyframes ProjectLInkAnime {
+                            to {
+                                transform: rotateY(180deg);
+                                // background-color: yellow;
+                            }
+                        }
+
+                    }
+                }
+                #languagesUsed {
+                    display: flex;
+                    flex-wrap: wrap;
+                    // row-gap: 4px;
+                    column-gap: 12px;
+                    align-items: center;
+                    // justify-content: space-between;
+                    font-weight: 700;
+                    font-size: 17px;
+
+                    p {
+                        margin: 0;
+                    }
+                }
+                h2 {
+                    font-size: 32px;
+                    // margin: 10px 0px;
+                    margin: 0;
+                }
+                h4 {
+                    margin: 0;
+                    font-size: 18px;
+                }         
+            }
+
+            .ProjectCardCenter {
+                border: 10px solid rgb(217 217 217 / 64%);
+                border-top-width: 30px;
+                border-bottom-width: 30px;
+                outline: 2.5px solid #FFFFFF;
+                &:hover {
+                    transform: scale(1.03);
+                }
+            }
+
+            .ProjectCardLeft {
+                transform: rotate(-35deg);
+            }
+            .ProjectCardRight {
+                transform: rotate(35deg);
+                margin-top: 380px;
+            }
+            
+            .ProjectCardLeft, .ProjectCardRight {
+                margin-top: 380px;
+            }
+        }
+    }
+
+    @media only screen and (max-width: 1260px) {
+        #ProjectsInner {
+            h1 {
+                margin-left: 5%;
+            }
+
+            p {
+                width: 80vw;
+                margin: auto;
+            }
+        }
+    }
+
+    @media only screen and (max-width: 1000px) {
+        #ProjectsInner {
+            min-height: 100vh;
+            h1 {
+                font-size: 35px;
+            }
+        
+            p {
+                font-size: 16px;
+            }
+
+            
+            #ProjectCollections {
+                margin-top: -50px;
+                
+                // height: 300px;
+                // padding-bottom: 30px;
+                // padding-top: 30px;
+                .ProjectCardLeft,
+                .ProjectCardRight {
+                    margin-top: 254px;
+                }
+
+                #ProjectCard {
+                    // width: 310px;
+                    height: 240px;
+                    border-width: 10px;
+                    margin-bottom: 50px;
+                    h2 {
+                        font-size: 24px;
+                        margin: 0;
+                    }
+                    
+                    #languagesUsed {
+                        font-size: 14px;
+                    }
+                    
+                    #ProjectImage{
+                        img {
+                            width: 270px;
+                        }
+                    }
+                }
+
+            }
+        }
+
+        @media only screen and (max-width: 710px) {
+            #ProjectsInner {
+                
+                #ProjectCollections {
+                    gap: 15px;
+                    
+                    .ProjectCardLeft,
+                    .ProjectCardRight {
+                        transform: rotate(0deg);
+                        // margin-top: 0;
+                    }
+                }
+            }
+        }
+        @media only screen and (max-width: 500px) {
+            #ProjectsInner {
+                // min-height: 50vh;
+                min-height: calc(100vh - 60px);
+                padding-top: 60px;
+
+                h1 {
+                    font-size: 22px;
+                }
+
+                p {
+                    font-size: 12px;
+                }
+    
+            }
+        }
+    }
+}

@@ -1,0 +1,218 @@
+#Certificate {
+  color: white;
+  position: relative;
+  padding: 90px 0;
+  margin-bottom: 90px;
+
+  h1 {
+    position: absolute;
+    width: 46vw;
+    font-size: 87px;
+    color: #bbc0c2;
+    right: 0;
+    top: -20px;
+  }
+
+  #Centerline {
+    position: absolute;
+    width: 6px;
+    background-color: white;
+    height: 85%;
+    // margin: 5% 49%;
+    left: 50%;
+    transform: translate(-50%, 0px);
+  }
+
+  .seeMore {
+    background-color: #c4c4c4;
+    color: #003153;
+    font-weight: bold;
+    text-align: center;
+    font-size: 14px;
+    border-radius: 50%;
+    aspect-ratio: 1;
+    z-index: 99;
+    padding: 14px;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 0px);
+    cursor: pointer;
+    border: none;
+    &:hover {
+      transform: translate(-50%, 0px) scale(1.02);
+    }
+  }
+
+  #AllCertificates {
+    // width: 100vw;
+    display: flex;
+    flex-direction: column;
+    // align-items: center;
+  }
+
+  #certificatesCardLeft {
+    display: flex;
+    align-items: center;
+    // justify-content: flex-end;
+    // margin-left: 20px;
+    width: 50%;
+
+    img:first-child {
+      // margin-right: 15%;
+      // width: 502px;
+      width: 350px;
+      margin: auto;
+      border-radius: 15px;
+      box-shadow: 0 0 10px #c4c4c4;
+      cursor: pointer;
+      &:hover {
+        transform: scale(1.02);
+      }
+    }
+
+    img:last-child {
+      z-index: 99;
+      // width: 45px;
+      width: 35px;
+      border-radius: 50%;
+      position: absolute;
+      // margin: auto;
+      aspect-ratio: 1;
+      background-color: white;
+      padding: 8px;
+      left: 50%;
+      cursor: pointer;
+      transform: translate(-50%, 0px);
+
+      &:hover {
+        transform: translate(-50%, 0px) scale(1.2);
+      }
+    }
+  }
+
+  #certificatesCardRight {
+    display: flex;
+    align-items: center;
+    // justify-content: start;
+    justify-content: flex-end;
+    // margin-left: 47.2%;
+    margin-left: 50%;
+    width: 50%;
+    flex-direction: row-reverse;
+
+    // width: 50%;
+    img:first-child {
+      width: 350px;
+      margin: auto;
+      border-radius: 15px;
+      border-radius: 15px;
+      box-shadow: 0 0 10px #c4c4c4;
+      cursor: pointer;
+      &:hover {
+        transform: scale(1.02);
+      }
+    }
+
+    img:last-child {
+      z-index: 99;
+      cursor: pointer;
+      width: 35px;
+      border-radius: 50%;
+      aspect-ratio: 1;
+      background-color: white;
+      padding: 8px;
+      position: absolute;
+      // margin: auto;
+      left: 50%;
+      transform: translate(-50%, 0px);
+
+      &:hover {
+        transform: translate(-50%, 0px) scale(1.2);
+      }
+    }
+  }
+
+  @media only screen and (max-width: 1140px) {
+    h1 {
+      font-size: 70px;
+    }
+
+    #certificatesCardLeft img:first-child,
+    #certificatesCardRight img:first-child {
+      width: 402px;
+    }
+  }
+
+  @media only screen and (max-width: 950px) {
+    h1 {
+      font-size: 55px;
+      top: 10px;
+    }
+
+    #certificatesCardLeft img:first-child,
+    #certificatesCardRight img:first-child {
+      width: 300px;
+    }
+
+    #certificatesCardLeft img:last-child,
+    #certificatesCardRight img:last-child {
+      width: 32px;
+    }
+  }
+
+  @media only screen and (max-width: 768px) {
+    #certificatesCardLeft img:first-child,
+    #certificatesCardRight img:first-child {
+      margin: auto;
+    }
+  }
+
+  @media only screen and (max-width: 676px) {
+    #Centerline {
+      left: 10%;
+    }
+
+    h1 {
+      position: initial;
+      margin: -20px 0 20px 30px;
+    }
+
+    #AllCertificates {
+      gap: 20px;
+    }
+
+    #certificatesCardLeft {
+      margin-left: 20%;
+    }
+
+    #certificatesCardRight {
+      margin-left: 20%;
+      flex-direction: row;
+      justify-content: start;
+    }
+
+    #certificatesCardLeft img:last-child,
+    #certificatesCardRight img:last-child {
+      left: 10%;
+    }
+
+    .seeMore {
+      left: 10%;
+      font-size: 15px;
+    }
+  }
+
+  @media only screen and (max-width: 425px) {
+    #certificatesCardLeft img:first-child,
+    #certificatesCardRight img:first-child {
+      width: 250px;
+    }
+  }
+
+  @media only screen and (max-width: 330px) {
+    h1 {
+      font-size: 32px;
+    }
+  }
+}

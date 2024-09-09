@@ -4,6 +4,7 @@
     margin: auto;
     margin-top: 40px;
     position: relative;
+    scroll-snap-align: end;
     #SocialMedia {
         display: flex;
         justify-content: space-evenly;
@@ -40,7 +41,7 @@
             width: 71px;
             height: 71px;
             cursor: pointer;
-            border-radius: 17px;
+            border-radius: 4px;
             &:hover{
                 transform: scale(1.05);
                 box-shadow: 0 0 5px white;

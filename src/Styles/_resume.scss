@@ -1,0 +1,118 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Roboto:ital,wght@0,400;0,500;0,700;0,900;1,400;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Italianno&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Gochi+Hand&display=swap");
+
+#Resume {
+  color: white;
+  font-family: "Roboto", sans-serif;
+  // padding: 100px 50px 50px 50px;
+  padding: 100px 0px 0px 0px;
+
+  // min-height: calc(100vh);
+  max-width: 1300px;
+  box-sizing: border-box;
+  margin: auto;
+
+  #ResumeContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    #resumeSection {
+      h3,
+      h4,
+      p {
+        margin: 14px 0;
+      }
+      h3 {
+        font-size: 28px;
+        margin: 20px 0;
+      }
+      #content {
+        border-left: 2px solid #b3541e;
+        #content-inner {
+          // position: relative;
+          padding-left: 20px;
+          padding-bottom: 20px;
+          h4 {
+            position: relative;
+            margin-top: 0;
+            font-size: 22px;
+            color: #b3541e;
+            text-transform: uppercase;
+            &::before {
+              content: "";
+              position: absolute;
+              margin-top: 6px;
+              left: -28px;
+              background-color: black;
+              border: 2px solid #b3541e;
+              width: 10px;
+              aspect-ratio: 1;
+              border-radius: 50%;
+            }
+          }
+          p {
+            font-size: 16px;
+          }
+          #duration {
+            margin-left: 15px;
+            background-color: rgba(255, 255, 255, 0.123);
+            padding: 4px 8px;
+          }
+          #location {
+            font-style: italic;
+          }
+          ul li {
+            margin-bottom: 6px;
+          }
+        }
+      }
+    }
+  }
+  @media only screen and (max-width: 1300px) {
+    max-width: 95vw;
+    margin: auto;
+    #ResumeContainer {
+      #resumeSection {
+        h3 {
+          font-size: 22px;
+          
+        }
+        #content {
+          #content-inner {
+            h4 {
+              font-size: 18px;
+            }
+            p, ul li ,#location,#duration{
+              font-size: 14px;
+            }
+          }
+        }
+      }
+    }
+  }
+  @media only screen and (max-width: 960px) {
+    max-width: 90vw;
+    #ResumeContainer {
+      grid-template-columns: 1fr;
+      gap: 20px;
+      #resumeSection {
+        h3 {
+          font-size: 22px;
+          margin-top: 10px;
+        }
+        #content {
+          #content-inner {
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+          }
+        }
+      }
+    }
+  }
+  @media only screen and (max-width: 800px) {
+    #ResumeContainer {
+      padding-bottom: 80px;
+    }
+  }
+}

@@ -8,19 +8,21 @@ body {
   background-color: #0B0A0B;
 }
 
-html {
-  scroll-behavior: smooth;
-}
 
 #root{
-  overflow-x: hidden;    
   width: 100vw;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;    
+  // scroll-snap-type: y mandatory;
 }
+
+section{
+  scroll-snap-align: start;
+}
+
 
 
 /* width */
