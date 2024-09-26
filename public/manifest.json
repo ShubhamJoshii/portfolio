@@ -1,0 +1,42 @@
+{
+    "name": "Shubham Joshi Portfolio",
+    "short_name": "Portfolio",
+    "description": "Portfolio of Shubham Joshi, Full Stack Web Developer experienced in MERN stack, TypeScript, JavaScript, and more.",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#ffffff",
+    "theme_color": "#3498db",
+    "orientation": "portrait-primary",
+    "scope": "/",
+    "icons": [
+      {
+        "src": "/favicon.ico",
+        "sizes": "192x192",
+        "type": "image/png"
+      },
+      {
+        "src": "/favicon.ico",
+        "sizes": "512x512",
+        "type": "image/png"
+      }
+    ],
+    "lang": "en",
+    "related_applications": [
+      {
+        "platform": "web",
+        "url": "https://shubhamjoshi.vercel.app/",
+        "id": "shubhamjoshi.vercel.app"
+      },
+      {
+        "platform": "web",
+        "url": "https://perky-beans.vercel.app/",
+        "id": "github.com/shubhamjoshii/perky-beans"
+      },
+      {
+        "platform": "web",
+        "url": "https://talkie-chat.vercel.app/",
+        "id": "talkie-chat.vercel.app"
+      }
+    ]
+  }
+  
