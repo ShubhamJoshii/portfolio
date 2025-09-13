@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap");
 
 #FrontPage {
+  // background: url("../Assets/backgroundAeroplane (5).gif");
   background: url("../Assets/backgroundAeroplane (5).gif"),
     linear-gradient(rgba(1, 24, 35, 1), rgba(11, 10, 11, 1));
   background-repeat: no-repeat;
@@ -41,7 +42,8 @@
       font-family: "Inter", sans-serif;
       font-size: 14px;
       padding: 0;
-      a{
+      
+      a {
         li {
           // padding: 0 15px 2px 15px;
           cursor: pointer;
@@ -258,6 +260,7 @@
     color: white;
     font-family: "Inter", sans-serif;
     flex: 1;
+    z-index: 9;
 
     #arrowDown {
       position: absolute;
@@ -269,6 +272,7 @@
     }
 
     #firstHalf {
+      
       // width: 45%;
       h2 {
         font-size: 54px;

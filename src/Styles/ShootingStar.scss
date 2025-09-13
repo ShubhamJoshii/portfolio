@@ -1,0 +1,37 @@
+#ShootingStarBG {
+  position: fixed;
+  top: 0;
+  color: white;
+  height: 100%;
+  width: 100vw;
+}
+
+.ShootingStar {
+  position: absolute;
+  animation: shooting 1s forwards;
+  // z-10
+  // animate-shooting
+}
+
+.star {
+  background: white;
+  width: 1px;
+  height: 1px;
+  border-radius: 1px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
+
+@keyframes shooting {
+  0% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(500px) translateY(-500px);
+    opacity: 0;
+  }
+}

@@ -12,6 +12,7 @@ import Typewriter from "typewriter-effect";
 import { motion } from "framer-motion";
 import { Element } from "react-scroll";
 import { Link } from "react-scroll";
+import ShootingStar from "./ShootingStar";
 
 const imageAnimation = {
   initial: {
@@ -51,6 +52,7 @@ const FrontPage = () => {
   return (
     <Element name="FrontPage" id="FrontPage">
       <Header />
+      <ShootingStar />
       <div id="FrontPageContainer" className="Pages">
         <Link to="Skills" spy={true} smooth={true}>
           <img

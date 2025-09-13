@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { Suspense, lazy } from "react";
+
 const Resume = lazy(() => import("./Components/Resume"));
 const Certificate = lazy(() => import("./Components/Certificate"));
 const Contact = lazy(() => import("./Components/Contact"));

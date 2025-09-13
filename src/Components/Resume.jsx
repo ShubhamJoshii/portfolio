@@ -2,6 +2,8 @@ import React from "react";
 import SectionHeader from "./SectionHeader";
 import { motion } from "framer-motion";
 import { Element } from "react-scroll";
+import { SlLocationPin } from "react-icons/sl";
+
 const animationSkills = {
   initial: {
     opacity: 0,
@@ -43,6 +45,36 @@ const Div = ({ MainHeading, data }) => {
               >
                 {curr.head}
               </motion.h4>
+              {curr.description.map((desc, index) => {
+                return (
+                  <motion.p
+                    key={index}
+                    variants={animationSkills}
+                    initial="initial"
+                    whileInView="animate"
+                    viewport={{
+                      once: true,
+                    }}
+                  >
+                    {desc}
+                  </motion.p>
+                );
+              })}
+              {curr.location && (
+                <motion.p
+                  id="location"
+                  variants={animationSkills}
+                  initial="initial"
+                  whileInView="animate"
+                  viewport={{
+                    once: true,
+                  }}
+                >
+                  <SlLocationPin />
+                  {curr.location}
+                </motion.p>
+              )}
+
               {curr.duration && (
                 <motion.span
                   id="duration"
@@ -56,34 +88,6 @@ const Div = ({ MainHeading, data }) => {
                   {curr.duration}
                 </motion.span>
               )}
-              {curr.location && (
-                <motion.p
-                  id="location"
-                  variants={animationSkills}
-                  initial="initial"
-                  whileInView="animate"
-                  viewport={{
-                    once: true,
-                  }}
-                >
-                  {curr.location}
-                </motion.p>
-              )}
-              {curr.description.map((desc,index) => {
-                return (
-                  <motion.p
-                  key={index}
-                    variants={animationSkills}
-                    initial="initial"
-                    whileInView="animate"
-                    viewport={{
-                      once: true,
-                    }}
-                  >
-                    {desc}
-                  </motion.p>
-                );
-              })}
               <ul>
                 {curr.list.map((li, index) => {
                   return (
@@ -112,7 +116,7 @@ const Div = ({ MainHeading, data }) => {
 const Resume = ({ setActiveNavbar }) => {
   const data1 = [
     {
-      id:"adfaf",
+      id: "adfaf",
       head: "Shubham Joshi",
       duration: "",
       location: "",
@@ -128,12 +132,23 @@ const Resume = ({ setActiveNavbar }) => {
   ];
   const data2 = [
     {
-      id:"aadeew",
+      id: "aadeer",
+      head: " Master of Computer Application (MCA)",
+      duration: "2025 - 2027",
+      location: "Paschim Vihar, New Delhi - 110063",
+      description: [
+        "Bharati Vidyapeeth's Institute of Computer Applications and Management (BVICAM)",
+        // "Relevant Courses: Aerodynamics, CAD/CAM, IoT Sensors, Data Science, Machine Learning.",
+      ],
+      list: [],
+    },
+    {
+      id: "aadeew",
       head: " Bachelor of Computer Application (BCA)",
       duration: "2021 - 2024",
-      location: "",
+      location: "Pitampura, New Delhi - 110034",
       description: [
-        "Vivekananda Institute of Professional Studies - TC, New Delhi, India.",
+        "Vivekananda Institute of Professional Studies - TC",
         // "Relevant Courses: Aerodynamics, CAD/CAM, IoT Sensors, Data Science, Machine Learning.",
       ],
       list: [],
@@ -141,7 +156,7 @@ const Resume = ({ setActiveNavbar }) => {
   ];
   const data3 = [
     {
-      id:"weqrw",
+      id: "weqrw",
       head: "Front-end Web Development Intern, IBM SkillsBuild and CSRBOX Academic Internship",
       duration: "June 2023 - Aug 2023",
       location: "",
@@ -153,7 +168,7 @@ const Resume = ({ setActiveNavbar }) => {
       ],
     },
     {
-      id:"gjdff",
+      id: "gjdff",
       head: "Association for Computer Enthusiasts (ACE)",
       duration: "",
       location: "",
