@@ -39,11 +39,11 @@ const SkillsData = [
     Color: "4584b6",
     knowledgePercent: 65,
   },
-  {
-    Text: "FIREBASE",
-    Color: "f6820d",
-    knowledgePercent: 65,
-  },
+  // {
+  //   Text: "FIREBASE",
+  //   Color: "f6820d",
+  //   knowledgePercent: 65,
+  // },
   {
     Text: "FIGMA",
     Color: "f24e1e",

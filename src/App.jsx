@@ -9,6 +9,8 @@ const FrontPage = lazy(() => import("./Components/FrontPage"));
 const Projects = lazy(() => import("./Components/Projects"));
 const Skills = lazy(() => import("./Components/Skills"));
 const Loading = lazy(() => import("./Components/Loading"));
+const GithubContributions = lazy(() => import("./Components/GithubContributions"));
+
 import { Events, scrollSpy, animateScroll as scroll } from "react-scroll";
 import { IoArrowUpOutline } from "react-icons/io5";
 import "./Styles/main.scss";
@@ -82,6 +84,7 @@ function App() {
         />
         <Resume setActiveNavbar={setActiveNavbar} />
         <Projects setActiveNavbar={setActiveNavbar} />
+        <GithubContributions />
         <Certificate setActiveNavbar={setActiveNavbar} />
         <Contact
           setActiveNavbar={setActiveNavbar}

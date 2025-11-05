@@ -1,0 +1,60 @@
+#GithubContributions{
+    color: #c9d1d9;
+    padding: 2rem 4rem;
+    background-color: #0d1117;
+    max-width: 1200px;
+    margin: auto;
+    #contrubutionContainer{
+        display: flex;
+        justify-content: center;
+        // width: 500px;
+        gap: 40px;
+        border-radius: 10px;
+        text-align: center;
+        margin: 2rem auto;
+        
+        .react-activity-calendar__scroll-container{
+            padding-bottom: 8px;
+        }
+        .selectYear{
+            display: flex;
+            z-index: 9;
+            flex-direction: column;
+            gap: 10px;
+            width: 100px;
+            margin-top: 20px;
+            button{
+                text-align: start;
+                cursor: pointer;
+                background: none;
+                width: 100%;
+                color: #ffffff;
+                font-size: 12px;
+                padding: 6px 12px;
+                border-radius: 6px;
+                border: none;
+            }
+            .active{
+                background-color: #1f6feb;
+            }
+        }
+    }
+    @media only screen and (max-width: 768px) {
+        padding: 10px 20px;
+        #contrubutionContainer{
+            flex-direction: column;
+            align-items: end;
+            .selectYear{
+                width: 300px;
+                margin-top: 0;
+                flex-direction: row;
+                bottom{
+                    width: unset;
+                }
+            }
+        }
+    }
+    // @media only screen and (max-width: 768px) {
+        
+    // }
+}
