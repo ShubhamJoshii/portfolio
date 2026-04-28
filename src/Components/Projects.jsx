@@ -5,6 +5,7 @@ import Project3 from "../Assets/Projects (3).png";
 import Project4 from "../Assets/Projects (4).png";
 import Project5 from "../Assets/Projects (5).png";
 import Project6 from "../Assets/Projects (6).png";
+import Project7 from "../Assets/Projects (7).png";
 import {
   FaCaretSquareLeft,
   FaCaretSquareRight,
@@ -29,6 +30,20 @@ const fadeInAnimationSkills = {
 };
 const ProjectsData = [
   {
+    Image: Project7,
+    Topic: "Campus-Code",
+    GithubLink: "https://github.com/ShubhamJoshii/CampusCode",
+    HostLink: "https://campuscodeapp.vercel.app/",
+    Language_Used: [
+      { Text: "MERN", Color: "b08039" },
+      { Text: "ReactJS", Color: "5CCFEE" },
+      { Text: "Mongodb", Color: "3E9837" },
+      { Text: "ExpressJS", Color: "FFE600" },
+      { Text: "NodeJS", Color: "3E9837" },
+      { Text: "Full-Stack", Color: "fff" },
+    ],
+  },
+  {
     Image: Project6,
     Topic: "Perky-Beans",
     GithubLink: "https://github.com/ShubhamJoshii/perky-beans",
@@ -39,7 +54,7 @@ const ProjectsData = [
       { Text: "Mongodb", Color: "3E9837" },
       { Text: "ExpressJS", Color: "FFE600" },
       { Text: "NodeJS", Color: "3E9837" },
-      { Text: "Firebase", Color: "FEA714" },
+      // { Text: "Firebase", Color: "FEA714" },
       { Text: "Sass", Color: "bf4080" },
       { Text: "Full-Stack", Color: "fff" },
     ],
@@ -98,23 +113,23 @@ const ProjectsData = [
       { Text: "Front-End", Color: "fff" },
     ],
   },
-  {
-    Image: Project4,
-    Topic: "Admin Dashboard",
-    GithubLink: "https://github.com/ShubhamJoshii/AdminDashboard",
-    HostLink: "https://shubhamjoshii.github.io/AdminDashboard/",
-    Language_Used: [
-      { Text: "ReactJS", Color: "5CCFEE" },
-      { Text: "CSS", Color: "2760E5" },
-      { Text: "Front-End", Color: "fff" },
-    ],
-  },
+  // {
+  //   Image: Project4,
+  //   Topic: "Admin Dashboard",
+  //   GithubLink: "https://github.com/ShubhamJoshii/AdminDashboard",
+  //   HostLink: "https://shubhamjoshii.github.io/AdminDashboard/",
+  //   Language_Used: [
+  //     { Text: "ReactJS", Color: "5CCFEE" },
+  //     { Text: "CSS", Color: "2760E5" },
+  //     { Text: "Front-End", Color: "fff" },
+  //   ],
+  // },
 ];
 
 const Projects = ({ setActiveNavbar }) => {
-
   const [centerImageIndex, setCenterImageIndex] = useState(0);
 
+  
   useEffect(() => {
     const handleScroll = () => {
       const images = document.querySelectorAll(".imageItem");
@@ -139,76 +154,76 @@ const Projects = ({ setActiveNavbar }) => {
 
   return (
     <>
-    <Element name="Projects" id="Projects">
-      <section id="Projects" ref={targetRef}  
-      // onMouseEnter={() => setActiveNavbar("Projects")}
-      >
-        <div className="contentContainer">
-          <div id="headerCarousel">
-            <SectionHeader
-              heading={"My Projects"}
-              description={
-                "Following projects showcase my skills and experience through real-world examples of my work. Each project is briefly described with links to GITHUB repositories and live demos of it. It reflects my ability to solve complex problems, work with different technologies, and manage projects effectively."
-              }
-            />
-          </div>
-          <motion.div className="images" style={{ x }}>
-            {ProjectsData.map((curr, id) => {
-              // console.log(curr);
-              return (
-                <motion.div
-                  key={id}
-                  initial={{ opacity: 0, y: 150 }}
-                  whileInView={{ opacity: 1, y: 0, threshold: 0.99 }}
-                  transition={{ duration: 0.5, ease: "easeOut" }}
-                  className="imageItem"
-                  style={{
-                    // borderColor: id === centerImageIndex ? "red" : "",
-                    transition: "scale 0.5s ease",
-                  }}
-                >
-                  <div className="image-container">
-                    <img className="image" src={curr.Image} alt="" />
-                    <div id="details">
-                      <div id="Topic-Links">
-                        <h3 className="topic">{curr.Topic}</h3>
-                        <div >
-                          <a
-                            href={curr.GithubLink}
-                            target="_blank"
-                            rel="noreferrer"
-                          >
-                            <FaGithub />
-                          </a>
-                          <a
-                            href={curr.HostLink}
-                            target="_blank"
-                            rel="noreferrer"
-                          >
-                            <FaLink />
-                          </a>
+      <Element name="Projects" id="Projects">
+        <section id="Projects" ref={targetRef}
+        // onMouseEnter={() => setActiveNavbar("Projects")}
+        >
+          <div className="contentContainer">
+            <div id="headerCarousel">
+              <SectionHeader
+                heading={"My Projects"}
+                description={
+                  "Following projects showcase my skills and experience through real-world examples of my work. Each project is briefly described with links to GITHUB repositories and live demos of it. It reflects my ability to solve complex problems, work with different technologies, and manage projects effectively."
+                }
+              />
+            </div>
+            <motion.div className="images" style={{ x }}>
+              {ProjectsData.map((curr, id) => {
+                // console.log(curr);
+                return (
+                  <motion.div
+                    key={id}
+                    initial={{ opacity: 0, y: 150 }}
+                    whileInView={{ opacity: 1, y: 0, threshold: 0.99 }}
+                    transition={{ duration: 0.5, ease: "easeOut" }}
+                    className="imageItem"
+                    style={{
+                      // borderColor: id === centerImageIndex ? "red" : "",
+                      transition: "scale 0.5s ease",
+                    }}
+                  >
+                    <div className="image-container">
+                      <img className="image" src={curr.Image} alt="" />
+                      <div id="details">
+                        <div id="Topic-Links">
+                          <h3 className="topic">{curr.Topic}</h3>
+                          <div >
+                            <a
+                              href={curr.GithubLink}
+                              target="_blank"
+                              rel="noreferrer"
+                            >
+                              <FaGithub />
+                            </a>
+                            <a
+                              href={curr.HostLink}
+                              target="_blank"
+                              rel="noreferrer"
+                            >
+                              <FaLink />
+                            </a>
+                          </div>
+                        </div>
+                        <div id="languagesUsed">
+                          {curr.Language_Used.map((curr2, ids2) => {
+                            return (
+                              <span
+                                style={{ color: `#${curr2.Color}` }}
+                                key={ids2}
+                              >
+                                #{curr2.Text}
+                              </span>
+                            );
+                          })}
                         </div>
                       </div>
-                      <div id="languagesUsed">
-                        {curr.Language_Used.map((curr2, ids2) => {
-                          return (
-                            <span
-                              style={{ color: `#${curr2.Color}` }}
-                              key={ids2}
-                            >
-                              #{curr2.Text}
-                            </span>
-                          );
-                        })}
-                      </div>
                     </div>
-                  </div>
-                </motion.div>
-              );
-            })}
-          </motion.div>
-        </div>
-      </section>
+                  </motion.div>
+                );
+              })}
+            </motion.div>
+          </div>
+        </section>
       </Element>
     </>
   );

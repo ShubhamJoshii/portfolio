@@ -34,6 +34,7 @@ function App() {
   const [activeNavbar, setActiveNavbar] = useState("FrontPage");
   const [isVisible, setIsVisible] = useState(false);
   const { scrollYProgress } = useScroll();
+  
   useEffect(() => {
     const toggleVisibility = () => {
       if (window.scrollY > 300) {

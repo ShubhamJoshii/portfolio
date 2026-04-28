@@ -24,7 +24,7 @@ const GithubContributions = () => {
                 />
                 <div className='selectYear'>
                     {
-                        [2025, 2024, 2023, 2022].map((year) => <button
+                        [2026, 2024, 2023, 2022].map((year) => <button
                             key={year}
                             className={year === contrubutionYear ? "active" : ""}
                             onClick={() => setContributionYear(year)}>
