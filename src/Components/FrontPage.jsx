@@ -82,7 +82,7 @@ const FrontPage = () => {
                 autoStart: true,
                 loop: true,
                 delay: 200,
-                strings: ["Shubham Joshi", "Web Developer"],
+                strings: ["Shubham Joshi", "Developer"],
               }}
             />
           </motion.h3>
@@ -93,7 +93,7 @@ const FrontPage = () => {
             custom={2}
           >
             A Full-Stack Web Developer passionate about creating <br />
-            interactive application and experiences on the web
+            interactive application and experiences on the web.
           </motion.p>
           <div id="btns">
             <motion.a

@@ -6,6 +6,7 @@ import Project4 from "../Assets/Projects (4).png";
 import Project5 from "../Assets/Projects (5).png";
 import Project6 from "../Assets/Projects (6).png";
 import Project7 from "../Assets/Projects (7).png";
+import Project8 from "../Assets/Projects (8).png";
 import {
   FaCaretSquareLeft,
   FaCaretSquareRight,
@@ -41,6 +42,19 @@ const ProjectsData = [
       { Text: "ExpressJS", Color: "FFE600" },
       { Text: "NodeJS", Color: "3E9837" },
       { Text: "Full-Stack", Color: "fff" },
+    ],
+  },
+  {
+    Image: Project8,
+    Topic: "College-Sync",
+    GithubLink: "https://github.com/ShubhamJoshii/CollegeMangementSystem",
+    HostLink: null,
+    Language_Used: [
+      { Text: "Java", Color: "b08039" },
+      { Text: "Swing", Color: "5CCFEE" },
+      { Text: "MySQL", Color: "3E9837" },
+      { Text: "NetBeans", Color: "FFE600" },
+      { Text: "Full-Stack", Color: "fff" }
     ],
   },
   {
@@ -102,17 +116,17 @@ const ProjectsData = [
       { Text: "Full-Stack", Color: "fff" },
     ],
   },
-  {
-    Image: Project1,
-    Topic: "Hotstar Clone",
-    GithubLink: "https://github.com/ShubhamJoshii/Hotstar-Clone",
-    HostLink: "https://shubhamjoshii.github.io/Hotstar-Clone/",
-    Language_Used: [
-      { Text: "ReactJS", Color: "5CCFEE" },
-      { Text: "CSS", Color: "2760E5" },
-      { Text: "Front-End", Color: "fff" },
-    ],
-  },
+  // {
+  //   Image: Project1,
+  //   Topic: "Hotstar Clone",
+  //   GithubLink: "https://github.com/ShubhamJoshii/Hotstar-Clone",
+  //   HostLink: "https://shubhamjoshii.github.io/Hotstar-Clone/",
+  //   Language_Used: [
+  //     { Text: "ReactJS", Color: "5CCFEE" },
+  //     { Text: "CSS", Color: "2760E5" },
+  //     { Text: "Front-End", Color: "fff" },
+  //   ],
+  // },
   // {
   //   Image: Project4,
   //   Topic: "Admin Dashboard",
@@ -195,13 +209,16 @@ const Projects = ({ setActiveNavbar }) => {
                             >
                               <FaGithub />
                             </a>
-                            <a
-                              href={curr.HostLink}
-                              target="_blank"
-                              rel="noreferrer"
-                            >
-                              <FaLink />
-                            </a>
+                            {
+                              curr.HostLink &&
+                              <a
+                                href={curr.HostLink}
+                                target="_blank"
+                                rel="noreferrer"
+                              >
+                                <FaLink />
+                              </a>
+                            }
                           </div>
                         </div>
                         <div id="languagesUsed">
