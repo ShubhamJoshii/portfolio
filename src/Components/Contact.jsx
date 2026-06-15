@@ -67,23 +67,6 @@ const ContactMe = ({fadeInAnimationSection }) => {
             <img src={PhoneLogo} alt='Logo' />
             <p>+91-7701990852</p>
           </div>
-          <div id='SocialMedias'>
-            <a href='https://www.instagram.com/invites/contact/?i=1k3g7gxwflgz0&utm_content=2of27u2' target='_blank' rel="noreferrer">
-              <img src={Instagram} alt="Social Logo" />
-            </a>
-            <a href='https://www.facebook.com/shubham.joshi.733076' target='_blank' rel="noreferrer">
-              <img src={FacebookLogo} alt="Social Logo" />
-            </a>
-            <a href='https://github.com/ShubhamJoshii' target='_blank' rel="noreferrer">
-              <img src={Github} alt="Social Logo" />
-            </a>
-            <a href='https://x.com/ShubhamJoshii03?t=TD1fIUJ3pUi-YhabSztJwA&s=09' target='_blank' rel="noreferrer">
-              <img src={Twitter} alt="Social Logo" />
-            </a>
-            <a href='https://www.linkedin.com/in/shubham-joshi-86aaa6232' target='_blank' rel="noreferrer">
-              <img src={Linkedin} alt="Social Logo" />
-            </a>
-          </div>
           <a href="https://drive.google.com/uc?export=view&id=170t40CWF0c0pLFkfXWJmqu7MMjPYWeO6" target='_blank' rel="noreferrer">
             <button>Download CV</button>
           </a>

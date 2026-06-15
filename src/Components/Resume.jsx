@@ -121,7 +121,7 @@ const Resume = ({ setActiveNavbar }) => {
       duration: "",
       location: "",
       description: [
-        "I'm a passionate Full Stack Developer currently pursuing my BCA-hons. I enjoy taking complex problems and turning them into simple and beautiful interface designs. I also love the logic and structure of coding and always. and i know about MERN stack, Sass, HTML, CSS, JS and Git and Github.",
+        "I'm a passionate Full Stack Developer currently pursuing my MCA. I enjoy taking complex problems and turning them into simple and beautiful interface designs. I also love the logic and structure of coding and always. and I know about MERN stack, JavaScript, Java, Git and Github.",
       ],
       list: [
         "New Delhi, INDIA",

@@ -1,10 +1,8 @@
-import React from "react";
-
 import { RiExternalLinkFill } from "react-icons/ri";
 import FrontShubhamDP from "../Assets/FrontDPImg.png";
 
 import Github from "../Assets/Github.png";
-import Instagram from "../Assets/Instagram.png";
+import LeetCode from "../Assets/LeetCode.png";
 import Linkedin from "../Assets/LinkedIn.png";
 import Header from "./Header";
 import DownArrow from "../Assets/Arrowdown.gif";
@@ -131,6 +129,17 @@ const FrontPage = () => {
             </motion.p>
             <div>
               <motion.a
+                href="https://www.linkedin.com/in/shubham-joshi-86aaa6232"
+                target="_blank"
+                rel="noreferrer"
+                variants={textVariants}
+                initial="initial"
+                animate="animate"
+                custom={4}
+              >
+                <img src={Linkedin} alt="socialMedias" />
+              </motion.a>
+              <motion.a
                 href="https://github.com/ShubhamJoshii"
                 target="_blank"
                 rel="noreferrer"
@@ -142,7 +151,7 @@ const FrontPage = () => {
                 <img src={Github} alt="socialMedias" />
               </motion.a>
               <motion.a
-                href="https://www.instagram.com/invites/contact/?i=1k3g7gxwflgz0&utm_content=2of27u2"
+                href="https://leetcode.com/shubhamjoshii"
                 target="_blank"
                 rel="noreferrer"
                 variants={textVariants}
@@ -150,18 +159,7 @@ const FrontPage = () => {
                 animate="animate"
                 custom={3}
               >
-                <img src={Instagram} alt="socialMedias" />
-              </motion.a>
-              <motion.a
-                href="https://www.linkedin.com/in/shubham-joshi-86aaa6232"
-                target="_blank"
-                rel="noreferrer"
-                variants={textVariants}
-                initial="initial"
-                animate="animate"
-                custom={4}
-              >
-                <img src={Linkedin} alt="socialMedias" />
+                <img src={LeetCode} alt="socialMedias" />
               </motion.a>
             </div>
           </div>

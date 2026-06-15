@@ -37,20 +37,6 @@
           border-radius: 10px;
         }
       }
-      #SocialMedias {
-        display: flex;
-        // justify-content: space-evenly;
-        // justify-content: center;
-        gap: 15px;
-        align-items: center;
-        padding: 20px 30px;
-        img {
-          &:hover {
-            transform: scale(1.1);
-            box-shadow: 0 0 5px white;
-          }
-        }
-      }
       button {
         font-size: 22px;
         background-color: #b1b7ba;
@@ -61,7 +47,7 @@
         font-weight: bold;
         padding: 5px;
         color: #041c32;
-        margin-top: 10px;
+        margin-top: 30px;
         cursor: pointer;
         &:hover {
           transform: scale(1.005);
@@ -136,9 +122,7 @@
       margin: 10px;
       #ContactMeDetails {
         width: 312px;
-        #SocialMedias {
-          justify-content: space-evenly;
-        }
+        
       }
       #ContactMEForm {
         width: 95%;

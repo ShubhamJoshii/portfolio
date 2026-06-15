@@ -39,14 +39,9 @@ const SkillsData = [
     Color: "4584b6",
     knowledgePercent: 65,
   },
-  // {
-  //   Text: "FIREBASE",
-  //   Color: "f6820d",
-  //   knowledgePercent: 65,
-  // },
   {
-    Text: "FIGMA",
-    Color: "f24e1e",
+    Text: "JAVA",
+    Color: "f6820d",
     knowledgePercent: 65,
   },
   {
@@ -99,7 +94,7 @@ const Skills = ({ setActiveNavbar, fadeInAnimationSection }) => {
         <SectionHeader
           heading={"Skills"}
           description={
-            "Proficient in React JS, Express JS, MongoDB, Typescript, CSS, JavaScript, and HTML5. Experienced with development tools like Git, VS Code, and cloud platforms such as Cloudinary and Firebase."
+            "Proficient in Java, React JS, Express JS, MongoDB, CSS, JavaScript, and HTML5. Experienced with development tools like Git, VS Code, and cloud platforms such as Cloudinary."
           }
         />
         <div id="cardsCollection">
